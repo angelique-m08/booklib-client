@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+}
+
+.homeHeader {
+  background: url(https://cdn.pixabay.com/photo/2016/03/27/19/32/blur-1283865_960_720.jpg) no-repeat center top;
+	background-size: cover;
+  height: 93vh;
+}
+
+.homeh1 {
+  font-size: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 8vh;
+  padding-right: 5vw;
+}
