@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## General info
+This project was made by Angélique Mora. 
+It's a digital and collaborative library.
+
+## Links:
+* GitHub booklib back : 
+
 ## Available Scripts
 
 In the project directory, you can run:
