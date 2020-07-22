@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #E8E8E8;
+  height: 7vh;
+}
+
+.navbarMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navbarMenu li {
+  list-style-type: none;
+}
