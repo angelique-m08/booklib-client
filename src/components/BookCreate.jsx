@@ -22,8 +22,6 @@ const BookCreate = () => {
         }}>
         <label for="title">Titre</label>
         <input id="title" name="title" required onChange={(event) => setTitle(event.target.value)} />
-        <label for="author">Auteur</label>
-        <input id="author" name="author" />
         <label for="genre">Genre</label>
         <input id="genre" name="genre" onChange={(event) => setGenre(event.target.value)} />
         <label for="resume">Résumé</label>

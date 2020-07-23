@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 
 const Author = ({ author }) => {
+  const [allAuthorBooks, setAllAuthorBooks] = useState([]);
+
+  useEffect(() => {
+    showAuthorBook()
+  }, []);
+
+  const showAuthorBook = () => {
+    Axios.get(`http://localhost:8000/books-authors/${author.id}/books`)
+    .then((res) => res.data)
+    .then((data) => {
+      setAllAuthorBooks(data);
+    });
+  }
 
   const deleteAuthor = () => {
     Axios.delete(`http://localhost:8000/authors/${author.id}`)
@@ -17,6 +30,10 @@ const Author = ({ author }) => {
       <div className="authorDescriptionDiv">
         <h1 className="authorTitle">{author.firstname} {author.lastname}</h1>
         <p className="authorResume">Biographie :<br></br>{author.biography}</p>
+        <p>Livres de l'auteur</p>
+        <ul>
+          {allAuthorBooks.map((book) => <li>{book.title}</li>)}
+        </ul>
       </div>
     </div>
   )
