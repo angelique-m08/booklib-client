@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+
 const Book = ({ book }) => {
+  const [allReviews, setAllReviews] = useState([]);
+
+  useEffect(() => {
+    Axios.get(`http://localhost:8000/reviews/${book.id}`)
+      .then((res) => res.data)
+      .then((data) => {
+        setAllReviews(data);
+      });
+  }, []);
 
   const deleteBook = () => {
     Axios.delete(`http://localhost:8000/books/${book.id}`)
@@ -18,8 +28,7 @@ const Book = ({ book }) => {
         <p className="bookResume">Résumé :<br></br>{book.resume}</p>
         <p>Les avis sur le livre :</p>
         <ul className="bookReview">
-          <li>Avis 1</li>
-          <li>Avis 2</li>
+          {allReviews.map((reviews) => <li>{reviews.review}</li> )}
         </ul>
         <form className="bookForm">
           <label for="review">Laissez votre avis</label>

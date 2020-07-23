@@ -1,5 +1,5 @@
 .bookDiv {
-  height: 97vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -38,5 +38,9 @@
 }
 
 .bookForm button {
+  width: 20vw;
+}
+
+.bookButton {
   width: 20vw;
 }
