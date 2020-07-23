@@ -5,7 +5,7 @@
 .homeHeader {
   background: url(https://cdn.pixabay.com/photo/2019/11/04/10/15/book-4600757_960_720.jpg) no-repeat center top;
 	background-size: cover;
-  height: 93vh;
+  height: 90vh;
 }
 
 .homeh1 {
@@ -16,4 +16,18 @@
   justify-content: flex-start;
   padding-top: 8vh;
   padding-left: 5vw;
+}
+
+@media screen and (max-width: 768px) {
+  
+.homeHeader {
+  background: url(https://cdn.pixabay.com/photo/2018/05/10/08/59/book-3387071_960_720.jpg) no-repeat center top;
+}
+
+.homeh1 {
+  font-size: 3rem;
+  color: black;
+  padding-top: 5vh;
+}
+
 }

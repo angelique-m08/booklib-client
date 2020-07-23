@@ -17,11 +17,14 @@ const BookCover = ({ book }) => {
   return(
     <>
       {bookClicked === true ? 
+      <>
         <Book book={book} />
-       : <Link to={`books/${book.id}`} onClick={showBook} className="bookcoverCover"><img src={book.cover} alt={book.title}></img></Link> }
+      </>
+       : <li><Link to={`/books/${book.id}`} onClick={showBook} className="bookcoverCover"><img src={book.cover} alt={book.title}></img></Link></li>
+      }
       <Router>
         <Switch>
-          <Route path={`books/${book.id}`} component={Book} />
+          <Route path={`/books/${book.id}`} component={Book} />
         </Switch>
       </Router>
     </>

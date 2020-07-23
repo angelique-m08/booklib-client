@@ -96,3 +96,22 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .booklistList {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .bookDiv {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+  }
+
+}

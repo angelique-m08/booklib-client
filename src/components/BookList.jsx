@@ -17,7 +17,7 @@ const BookList = () => {
   return(
     <div className="booklistDiv">
       <ul className="booklistList">
-        {allBooks.map((book) => <li className="booklistListLis"><BookCover book={book} /></li> )}
+        {allBooks.map((book) => <li className="booklistListLi"><BookCover book={book} /></li> )}
       </ul>
     </div>
   )
