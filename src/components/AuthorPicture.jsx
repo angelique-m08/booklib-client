@@ -18,10 +18,10 @@ const AuthorPicture = ({ author }) => {
     <>
       {authorClicked === true ? 
         <Author author={author} />
-       : <Link to={`authors/${author.id}`} onClick={showBook} className="authorcoverCover"><img src={author.picture} alt={author.firstname} className="authorPicture"></img></Link> }
+       : <li><Link to={`/authors/${author.id}`} onClick={showBook} className="authorcoverCover"><img src={author.picture} alt={author.firstname} className="authorPicture"></img></Link></li> }
       <Router>
         <Switch>
-          <Route path={`authors/${author.id}`} component={Author} />
+          <Route path={`/authors/${author.id}`} component={Author} />
         </Switch>
       </Router>
     </>
