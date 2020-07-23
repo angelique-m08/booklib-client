@@ -16,7 +16,9 @@ const BookCover = ({ book }) => {
 
   return(
     <>
-      {bookClicked === true ? <Book clicked={bookClicked} book={book} /> : <Link to={`books/${book.id}`} onClick={showBook}><img src={book.cover} alt={book.title}></img></Link> }
+      {bookClicked === true ? 
+        <Book book={book} />
+       : <Link to={`books/${book.id}`} onClick={showBook} className="bookCoverLink"><img src={book.cover} alt={book.title}></img></Link> }
       <Router>
         <Switch>
           <Route path={`books/${book.id}`} component={Book} />

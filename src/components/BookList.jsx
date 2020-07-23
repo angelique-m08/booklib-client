@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import BookCover from './BookCover';
+import './book.css'
 
 const BookList = () => {
   const [allBooks, setAllBooks] = useState([]);
@@ -16,7 +17,7 @@ const BookList = () => {
   return(
     <div>
       <ul>
-        {allBooks.map((book) => <li><BookCover book={book} /></li> )}
+        {allBooks.map((book) => <li className="booklistList"><BookCover book={book} /></li> )}
       </ul>
     </div>
   )

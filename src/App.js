@@ -7,6 +7,7 @@ import {
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import BookList from './components/BookList';
+import BookCreate from './components/BookCreate';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/books" component={BookList} />
+          <Route path="/createbooks" component={BookCreate} />
         </Switch>
       </Router>
     </>
