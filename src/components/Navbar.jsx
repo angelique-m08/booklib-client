@@ -13,7 +13,6 @@ const Navbar = () => {
       <li><Link to="/authors">Auteurs</Link></li>
       <li><Link to="/createbooks">Ajouter un livre</Link></li>
       <li><Link to="/createauthors">Ajouter un auteur</Link></li>
-      <li><Link to="/search">Rechercher</Link></li>
     </ul>
   </nav>
   )
