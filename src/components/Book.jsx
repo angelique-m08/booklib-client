@@ -7,11 +7,11 @@ const Book = ({ book }) => {
   const [allAuthors, setAllAuthors] = useState([]);
 
   useEffect(() => {
-    showBook()
+    showReview()
     showAuthor()
   }, []);
 
-  const showBook = () => {
+  const showReview = () => {
     Axios.get(`http://localhost:8000/reviews/${book.id}`)
     .then((res) => res.data)
     .then((data) => {
@@ -35,7 +35,7 @@ const Book = ({ book }) => {
   const addReview = () => {
     Axios.post(`http://localhost:8000/reviews/${book.id}`, { book_id: book.id, Review } )
     .then((res) => alert("Avis enregistré"))
-    .then((res) => showBook())
+    .then((res) => showReview())
   }
 
   return(
