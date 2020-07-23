@@ -17,7 +17,7 @@ const AuthorList = () => {
   return(
     <div className="authorlistDiv">
       <ul className="authorlistList">
-        {allAuthors.map((author) => <li><AuthorPicture author={author} /></li> )}
+        {allAuthors.map((author) => <li className="authorlistLi"><AuthorPicture author={author} /></li> )}
       </ul>
     </div>
   )

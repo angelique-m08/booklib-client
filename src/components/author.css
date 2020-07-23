@@ -43,7 +43,7 @@
   padding: 2rem;
 }
 
-.authorlistList li {
+.authorlistLi {
   list-style-type: none;
   padding-top: 2rem;
 }
@@ -63,5 +63,30 @@
 }
 
 .authorButton {
-  width: 20vw;
+  height: 5vh;
+  background-color: #050503;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.authorBookList {
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+.authorTitle {
+  margin-bottom: 1rem;
+}
+
+.authorResume {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.authorUnderline {
+  text-decoration: underline;
+  font-size: 1.2rem;
 }
