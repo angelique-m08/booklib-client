@@ -5,14 +5,14 @@ const Book = ({ book }) => {
     <div>
       <img src={book.cover} alt={book.title} />
       <p className="bookTitle">{book.title}</p>
-      <p className="bookResume">{book.resume}</p>
+      <p className="bookResume">Résumé :<br></br>{book.resume}</p>
+      <p>Les avis sur le livre :</p>
       <ul className="bookReview">
-        <p>Avis</p>
         <li>Avis 1</li>
         <li>Avis 2</li>
       </ul>
       <form>
-        <label for="review">Laissez un avis</label>
+        <label for="review">Laissez votre avis</label>
         <textarea id="review" name="review"></textarea>
         <button type="button">Ajouter</button>
       </form>
