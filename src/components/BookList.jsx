@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
+import BookCover from './BookCover';
 
 const BookList = () => {
+  const [allBooks, setAllBooks] = useState([]);
+
+  useEffect(() => {
+    Axios.get(`http://localhost:8000/books`)
+      .then((res) => res.data)
+      .then((data) => {
+        setAllBooks(data);
+      });
+  }, []);
+
   return(
     <div>
       <ul>
-        <li>Livre 1</li>
-        <li>Livre 2</li>
+        {allBooks.map((book) => <li><BookCover book={book} /></li> )}
       </ul>
     </div>
   )
