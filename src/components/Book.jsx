@@ -14,7 +14,7 @@ const Book = ({ book }) => {
       <form>
         <label for="review">Laissez votre avis</label>
         <textarea id="review" name="review"></textarea>
-        <button type="button">Ajouter</button>
+        <button type="submit">Ajouter</button>
       </form>
     </div>
   )
