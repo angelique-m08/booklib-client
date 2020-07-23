@@ -15,9 +15,9 @@ const BookList = () => {
   }, []);
 
   return(
-    <div>
-      <ul>
-        {allBooks.map((book) => <li className="booklistList"><BookCover book={book} /></li> )}
+    <div className="booklistDiv">
+      <ul className="booklistList">
+        {allBooks.map((book) => <li><BookCover book={book} /></li> )}
       </ul>
     </div>
   )
