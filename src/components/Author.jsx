@@ -25,14 +25,14 @@ const Author = ({ author }) => {
     <div className="authorDiv">
       <div className="authorLeftDiv">
         <img src={author.picture} alt={author.firstname} className="authorCover" />
-        <button type="submit" onClick={deleteAuthor}>Supprimer l'auteur</button>
+        <button type="submit" onClick={deleteAuthor} className="authorButton">Supprimer l'auteur</button>
       </div>
       <div className="authorDescriptionDiv">
         <h1 className="authorTitle">{author.firstname} {author.lastname}</h1>
-        <p className="authorResume">Biographie :<br></br>{author.biography}</p>
-        <p>Livres de l'auteur</p>
+        <p className="authorResume"><span className="authorUnderline">Biographie :</span><br></br>{author.biography}</p>
+        <p className="authorUnderline">Livres de l'auteur :</p>
         <ul>
-          {allAuthorBooks.map((book) => <li>{book.title}</li>)}
+          {allAuthorBooks.map((book) => <li className="authorBookList">{book.title}</li>)}
         </ul>
       </div>
     </div>

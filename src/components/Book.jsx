@@ -42,22 +42,22 @@ const Book = ({ book }) => {
     <div className="bookDiv">
       <div className="bookLeftDiv">
         <img src={book.cover} alt={book.title} className="bookCover" />
-        <button type="submit" onClick={deleteBook}>Supprimer le livre</button>
+        <button type="submit" onClick={deleteBook} className="bookButton">Supprimer le livre</button>
       </div>
       <div className="bookDescriptionDiv">
         <h1 className="bookTitle">{book.title}</h1>
-        <h2>Auteur(s): {allAuthors.map((author) => <p>{author.firstname} {author.lastname}</p>)}</h2>
-        <p className="bookResume">Résumé :<br></br>{book.resume}</p>
-        <p>Les avis sur le livre :</p>
+        <h2 className="bookAuthor"><span className="bookUnderline">Auteur(s): </span>{allAuthors.map((author) => <p>{author.firstname} {author.lastname}</p>)}</h2>
+        <p className="bookResume"><span className="authorUnderline">Résumé :</span><br></br>{book.resume}</p>
+        <p className="authorUnderline">Les avis sur le livre :</p>
         <ul className="bookReview">
-          {allReviews.map((reviews) => <li>{reviews.review}</li> )}
+          {allReviews.map((reviews) => <li className="bookBookList">{reviews.review}</li> )}
         </ul>
         <form className="bookForm"
           onSubmit={(event) => {
             event.preventDefault()}}>
-          <label for="review">Laissez votre avis</label>
-          <textarea id="review" name="review" required onChange={(event) => setReview(event.target.value)}></textarea>
-          <button type="submit" onClick={addReview}>Ajouter</button>
+          <label for="review" className="authorUnderline">Laissez votre avis</label>
+          <textarea id="review" name="review" className="bookTextarea" required onChange={(event) => setReview(event.target.value)}></textarea>
+          <button type="submit" onClick={addReview} className="bookButton">Ajouter</button>
         </form>
       </div>
     </div>

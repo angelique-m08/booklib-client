@@ -15,7 +15,7 @@ const BookCreate = () => {
   
   return (
     <div className="bookCreateDiv">
-      <h1 className="bookCreateTitle">Ajouter un nouveau livre</h1>
+      <h1 className="bookCreateTitle">Ajouter un livre</h1>
       <form className="bookCreateForm"
         onSubmit={(event) => {
           event.preventDefault();

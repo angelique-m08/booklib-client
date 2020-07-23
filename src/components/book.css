@@ -39,7 +39,7 @@
   padding: 2rem;
 }
 
-.booklistList li {
+.booklistListLi {
   list-style-type: none;
   padding-top: 2rem;
 }
@@ -49,15 +49,69 @@
   flex-direction: column;
 }
 
-.bookForm textarea {
-  width: 40vw;
-  resize: none;
-}
-
 .bookForm button {
   width: 20vw;
 }
 
 .bookButton {
-  width: 20vw;
+  height: 5vh;
+  background-color: #050503;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.bookBookList {
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+.bookTitle {
+  margin-bottom: 1rem;
+}
+
+.bookAuthor {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.bookResume {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.bookUnderline {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.bookTextarea {
+  height: 20vh;
+  width: 50vw;
+  resize: none;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .booklistList {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .bookDiv {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+  }
+
 }
