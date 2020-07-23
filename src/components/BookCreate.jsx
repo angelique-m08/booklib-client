@@ -14,7 +14,7 @@ const BookCreate = () => {
   };
   
   return (
-    <div>
+    <div className="bookCreateDiv">
       <h1 className="bookCreateTitle">Ajouter un nouveau livre</h1>
       <form className="bookCreateForm"
         onSubmit={(event) => {

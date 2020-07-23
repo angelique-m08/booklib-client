@@ -1,5 +1,7 @@
 .bookCreateTitle {
   text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
 }
 
 .bookCreateForm {
@@ -12,7 +14,12 @@
 
 .bookCreateForm input {
   width: 50vw;
+  height: 3vh;
   margin-bottom: 1rem;
+}
+
+.bookCreateForm label {
+  padding-bottom: .5rem;
 }
 
 .bookCreateForm textarea {
@@ -23,6 +30,10 @@
 }
 
 .bookCreateFormButton {
-  width: 30vw;
+  width: 20vw;
+  height: 5vh;
   font-size: 1rem;
+  background-color: #e9e8e8;
+  border: 1px solid grey;
+  border-radius: 5px;
 }

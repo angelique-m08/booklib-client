@@ -6,6 +6,13 @@
   align-items: flex-start;
 }
 
+.bookcoverCover {
+  height: 50vh;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
 .bookCover {
   height: 50vh;
   padding: 2rem;
@@ -25,6 +32,16 @@
 
 .booklistList {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.booklistList li {
+  list-style-type: none;
+  padding-top: 2rem;
 }
 
 .bookForm {
