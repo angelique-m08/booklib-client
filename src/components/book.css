@@ -1,0 +1,42 @@
+.bookDiv {
+  height: 97vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bookCover {
+  height: 50vh;
+  padding: 2rem;
+}
+
+.bookLeftDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bookDescriptionDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.booklistList {
+  list-style-type: none;
+}
+
+.bookForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookForm textarea {
+  width: 40vw;
+  resize: none;
+}
+
+.bookForm button {
+  width: 20vw;
+}
