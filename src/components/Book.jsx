@@ -3,18 +3,29 @@ import Axios from 'axios';
 
 const Book = ({ book }) => {
   const [allReviews, setAllReviews] = useState([]);
+  const [Review, setReview] = useState("");
 
   useEffect(() => {
-    Axios.get(`http://localhost:8000/reviews/${book.id}`)
-      .then((res) => res.data)
-      .then((data) => {
-        setAllReviews(data);
-      });
+    showBook()
   }, []);
+
+  const showBook = () => {
+    Axios.get(`http://localhost:8000/reviews/${book.id}`)
+    .then((res) => res.data)
+    .then((data) => {
+      setAllReviews(data, Review);
+    });
+  }
 
   const deleteBook = () => {
     Axios.delete(`http://localhost:8000/books/${book.id}`)
     .then(res => alert("Livre supprimé"))
+  }
+
+  const addReview = () => {
+    Axios.post(`http://localhost:8000/reviews/${book.id}`, { book_id: book.id, Review } )
+    .then((res) => alert("Avis enregistré"))
+    .then((res) => showBook())
   }
 
   return(
@@ -30,10 +41,12 @@ const Book = ({ book }) => {
         <ul className="bookReview">
           {allReviews.map((reviews) => <li>{reviews.review}</li> )}
         </ul>
-        <form className="bookForm">
+        <form className="bookForm"
+          onSubmit={(event) => {
+            event.preventDefault()}}>
           <label for="review">Laissez votre avis</label>
-          <textarea id="review" name="review"></textarea>
-          <button type="submit">Ajouter</button>
+          <textarea id="review" name="review" required onChange={(event) => setReview(event.target.value)}></textarea>
+          <button type="submit" onClick={addReview}>Ajouter</button>
         </form>
       </div>
     </div>
