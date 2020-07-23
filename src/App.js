@@ -7,6 +7,7 @@ import {
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import BookList from './components/BookList';
+import AuthorList from './components/AuthorList';
 import BookCreate from './components/BookCreate';
 import AuthorCreate from './components/AuthorCreate';
 
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/books" component={BookList} />
+          <Route path="/authors" component={AuthorList} />
           <Route path="/createbooks" component={BookCreate} />
           <Route path="/createauthors" component={AuthorCreate} />
         </Switch>
