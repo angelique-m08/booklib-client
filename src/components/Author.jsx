@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 
-const Author = ({ author, book }) => {
+const Author = ({ author }) => {
   const [allAuthorBooks, setAllAuthorBooks] = useState([]);
 
   useEffect(() => {

@@ -4,9 +4,11 @@ import Axios from 'axios';
 const Book = ({ book }) => {
   const [allReviews, setAllReviews] = useState([]);
   const [Review, setReview] = useState("");
+  const [allAuthors, setAllAuthors] = useState([]);
 
   useEffect(() => {
     showBook()
+    showAuthor()
   }, []);
 
   const showBook = () => {
@@ -14,6 +16,14 @@ const Book = ({ book }) => {
     .then((res) => res.data)
     .then((data) => {
       setAllReviews(data, Review);
+    });
+  }
+
+  const showAuthor = () => {
+    Axios.get(`http://localhost:8000/books-authors/${book.id}/authors`)
+    .then((res) => res.data)
+    .then((data) => {
+      setAllAuthors(data);
     });
   }
 
@@ -36,6 +46,7 @@ const Book = ({ book }) => {
       </div>
       <div className="bookDescriptionDiv">
         <h1 className="bookTitle">{book.title}</h1>
+        <h2>Auteur(s): {allAuthors.map((author) => <p>{author.firstname} {author.lastname}</p>)}</h2>
         <p className="bookResume">Résumé :<br></br>{book.resume}</p>
         <p>Les avis sur le livre :</p>
         <ul className="bookReview">
